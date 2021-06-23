@@ -1,0 +1,761 @@
+{
+	"info": {
+		"_postman_id": "4c98ed06-f727-45c1-ac05-3819ddca850a",
+		"name": "BackEnc _adminpro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login de usuarios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"cristina1@gmail.com\",\n    \"password\":\"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login Google",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IjZiYzYzZTlmMThkNTYxYjM0ZjU2NjhmODhhZTI3ZDQ4ODc2ZDgwNzMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNzgxOTM2ODQzODgzLXAyZTA4M2loYTdpb29qMGd1NjF2cmo1bjRjNXVnOG8yLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiNzgxOTM2ODQzODgzLXAyZTA4M2loYTdpb29qMGd1NjF2cmo1bjRjNXVnOG8yLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTA5NTAzMjYyODIxNjU1MTY5MTI2IiwiZW1haWwiOiJpc2RpbnBpcm94QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhdF9oYXNoIjoiRzhhazRzYUxQcHF0ZUh6aGlxcUc1dyIsIm5hbWUiOiJpc2RpbiBwaXJveCIsInBpY3R1cmUiOiJodHRwczovL2xoNS5nb29nbGV1c2VyY29udGVudC5jb20vLTNVRjdyYV9JZVdFL0FBQUFBQUFBQUFJL0FBQUFBQUFBQUFBL0FNWnV1Y215eGxwTldtZnBiek5LWk82d1BORHlfOFBWa0Evczk2LWMvcGhvdG8uanBnIiwiZ2l2ZW5fbmFtZSI6ImlzZGluIiwiZmFtaWx5X25hbWUiOiJwaXJveCIsImxvY2FsZSI6ImVzIiwiaWF0IjoxNTk4MDM1MTA5LCJleHAiOjE1OTgwMzg3MDksImp0aSI6IjhkYTEyOTFkNDUxNjhhMzFhNjE0ZmY0YzlkMmFjMWQ0YThiMTg3MmUifQ.dZB-ls1XK3a-akBkTd22Veg8E2ILr6IKqaFw9evZqoXSwF5h7dsJP8GWnojqjo2G17X9aRXMuTGxBklhtJEOHRuXTpjjUumH_c-QJDj8u1Ebw3QVs1-TVKJsUKmcxYdEp8CedIzRmTIIP_4tHBIrnimeSe7FdgpCpQpJPwFAZXMuYBZeuR5GGYNFDCMVZvhb1MSxVyNvCdCKcmgXXjZxR7ZualPd9RsYqaSvfvPLlAf6LcAfxKODR1t6dmN3irqwKd4fZa5dcm07S-I1GY6b4fjQl0ViFJRpAP1-lx29KLOHbK5cytSqyEB5SiNZQ-LX2CxNwd-VezhQX5xhS6K0qw\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/login/google",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"login",
+						"google"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Renovar Login usuarios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjM0MWE1Y2M1MDY2ZTAzZmUyN2EzZTQiLCJpYXQiOjE1OTgxMTU2MzEsImV4cCI6MTU5ODM3NDgzMX0.iozy5srd1J8JGrBRo_21spGZk74t4nAURmjLRBsNvJE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\":\"cristina@gmail.com\",\n    \"password\":1234\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/login/renovarlogin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"login",
+						"renovarlogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar usurios",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSUQiOiI1ZjMxN2JjNDMzNDhlZDA0ZjAyMDA0MzciLCJpYXQiOjE1OTcxNjI4MDUsImV4cCI6MTU5NzIwNjAwNX0.MM8TeteSoLByWncY-B25BnCssH0KbgnpZ6zTLKx1OuY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"rol\": \"USER_Rol\",\n            \"nombre\": \"cristinilla1\",\n            \"email\": \"cristi@gmail.com\"\n            \n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/usuarios/5f3179a3e2aa6e046eba4d9e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"usuarios",
+						"5f3179a3e2aa6e046eba4d9e"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Hospital",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjM0MWE1Y2M1MDY2ZTAzZmUyN2EzZTQiLCJpYXQiOjE1OTc2ODY4ODcsImV4cCI6MTU5Nzk0NjA4N30.7x7mPQI6rZlkpHeq7r-AO4_Nh54Oim10V2aaB0RwxS8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\":\"Hospital de Santa Maria la Majore!!!!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/hospitales/5f341c195957cf051de9c9e5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"hospitales",
+						"5f341c195957cf051de9c9e5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Medicos",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"description": "Valido durante 72 horas",
+						"key": "x-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjM0MWE1Y2M1MDY2ZTAzZmUyN2EzZTQiLCJpYXQiOjE1OTc2ODg5NzksImV4cCI6MTU5Nzk0ODE3OX0.fH2z10w2IxNseyK3IB9jLSFA04f-vYrcbMSMiHoTRbo"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\":\"Medico prueba de ACTUALIZACION!!!!\",\n    \"hospital\":\"5f341d136cc29705631325e1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/medicos/5f3acc9f4a91450ce73176cf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"medicos",
+						"5f3acc9f4a91450ce73176cf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subir Archivo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjM0MWE1Y2M1MDY2ZTAzZmUyN2EzZTQiLCJpYXQiOjE1OTg5ODI3MzIsImV4cCI6MTU5OTI0MTkzMn0.LvcZujdjS-Ye5sMacLj0vhVrEzMnA6FH8R3DX4aVcE0"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": "/Users/rauloriol/Desktop/hospital4.png"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/upload/hospitales/5f4d4173fc18a805bf8910d3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"upload",
+						"hospitales",
+						"5f4d4173fc18a805bf8910d3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar Hospital",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjM0MWE1Y2M1MDY2ZTAzZmUyN2EzZTQiLCJpYXQiOjE1OTc2ODgzMjYsImV4cCI6MTU5Nzk0NzUyNn0.zdi0JR6nkR3RywKscReif9Vc_dbwCUW0rvPZQzpN5Mc"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/hospitales/5f341d0d6cc29705631325e0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"hospitales",
+						"5f341d0d6cc29705631325e0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar Usuarios",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4001/api/usuarios/5f312a0697697c1090bb5a98",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"usuarios",
+						"5f312a0697697c1090bb5a98"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar medicos",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"description": "Valido durante 72 horas",
+						"key": "x-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjM0MWE1Y2M1MDY2ZTAzZmUyN2EzZTQiLCJpYXQiOjE1OTc2ODg5NzksImV4cCI6MTU5Nzk0ODE3OX0.fH2z10w2IxNseyK3IB9jLSFA04f-vYrcbMSMiHoTRbo"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/medicos/5f3ad0829dbb370f127868ee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"medicos",
+						"5f3ad0829dbb370f127868ee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Añadir usuarios nuevos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\":\"test16\",\n    \"email\":\"test16@gmail.com\",\n    \"password\":\"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"usuarios"
+					]
+				},
+				"description": "Para crear usuarios"
+			},
+			"response": []
+		},
+		{
+			"name": "Añadir Hospitales",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjM0MWE1Y2M1MDY2ZTAzZmUyN2EzZTQiLCJpYXQiOjE1OTcyNTAxNDAsImV4cCI6MTU5NzI5MzM0MH0.1WdrdVXFzR-xelXUlnA3PEPAu8XlLKwnsy87WhgOqTo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\":\"Hospital del Sur\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/hospitales/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"hospitales",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Añadir Medicos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"description": "Valido durante 72 horas",
+						"key": "x-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjM0MWE1Y2M1MDY2ZTAzZmUyN2EzZTQiLCJpYXQiOjE1OTg5ODAzOTksImV4cCI6MTU5OTIzOTU5OX0.02vXcBj7URYRssGMRJE7lSdvZ-kavpSA8IqNHNyDvy8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\":\"Pau Oriol Cloquell\",\n    \"hospital\":\"5f341d1f6cc29705631325e3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/medicos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"medicos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "busquedaTotal",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjM0MWE1Y2M1MDY2ZTAzZmUyN2EzZTQiLCJpYXQiOjE1OTc0MjM3MTQsImV4cCI6MTU5NzY4MjkxNH0.kPhm_C40TkEpsnFfaKySExmNow8dxzVBJsveJzouurY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/buscador/a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"buscador",
+						"a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver imagen",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjM0MWE1Y2M1MDY2ZTAzZmUyN2EzZTQiLCJpYXQiOjE1OTc2NjE3OTcsImV4cCI6MTU5NzkyMDk5N30.DaMmqlD53jU-F-XkA5h3um6G8jjvpREvNhWFl8KcaFY"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": "/Users/rauloriol/Desktop/superman.jpg",
+							"disabled": true
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/upload/medicos/631a761f-cafb-4ea3-bd5b-f92dca4ddc63.png",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"upload",
+						"medicos",
+						"631a761f-cafb-4ea3-bd5b-f92dca4ddc63.png"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "busqueda por coleccion",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjM0MWE1Y2M1MDY2ZTAzZmUyN2EzZTQiLCJpYXQiOjE1OTcyNTk5MzQsImV4cCI6MTU5NzUxOTEzNH0.vHTeaFMoQ73kXcfirqK1o7B3jHhfd8R4RWnLhmS1PEY"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/buscador/coleccion/medicos/a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"buscador",
+						"coleccion",
+						"medicos",
+						"a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver usuarios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjQwMDc1NDM5Y2RmYjA3NWZjODRkZTkiLCJpYXQiOjE1OTgwMzU5NDgsImV4cCI6MTU5ODI5NTE0OH0.I0aLqFZVnXkL4qcivGZI681vMsuWmr5MfI-cCkyaVpA",
+						"description": "Token valido 72 horas, renovar haciendo login y copiando el nuevo token",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/usuarios?desde=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"usuarios"
+					],
+					"query": [
+						{
+							"key": "desde",
+							"value": "0",
+							"description": "VALOR DE PAGINACION si no esta empieza en cero, es opcional"
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver Medicos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"description": "Valido durante 72 horas",
+						"key": "x-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjM0MWE1Y2M1MDY2ZTAzZmUyN2EzZTQiLCJpYXQiOjE1OTkwNzAzNTksImV4cCI6MTU5OTMyOTU1OX0.v0i_VXAjcZCjSNMYABktMYf7ZoHLA5COrJL-k5mZEgg"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/medicos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"medicos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver Medico por ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"description": "Valido durante 72 horas",
+						"key": "x-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjM0MWE1Y2M1MDY2ZTAzZmUyN2EzZTQiLCJpYXQiOjE1OTkwNzAzNTksImV4cCI6MTU5OTMyOTU1OX0.v0i_VXAjcZCjSNMYABktMYf7ZoHLA5COrJL-k5mZEgg"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/medicos/5f4fdab598cc481e0cc23771",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"medicos",
+						"5f4fdab598cc481e0cc23771"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ver Hospitales",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjM0MWE1Y2M1MDY2ZTAzZmUyN2EzZTQiLCJpYXQiOjE1OTg4NTg1MzAsImV4cCI6MTU5OTExNzczMH0.0Ea3yZdYS7l2g4gEafGPWh3qN2nTUnKW_K6Obif1klE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/hospitales/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"hospitales",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
